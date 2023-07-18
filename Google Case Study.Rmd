@@ -1,0 +1,251 @@
+---
+title: "Google Case Study Cyclistic"
+author: "Zhihong Mai"
+date: "2023-07-18"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+Sys.setlocale("LC_TIME", "English")
+```
+
+
+### Install and loading packages
+```{r warning=FALSE}
+# Since we have installed these packages, we can simply load them.
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+```
+
+### Importing the data
+```{r}
+# Import data from local storage. 
+Jan_2022<-read.csv("C:\\Users\\maizh\\Downloads/202201-divvy-tripdata.csv",header=TRUE)
+Feb_2022<-read.csv("C:\\Users\\maizh\\Downloads/202202-divvy-tripdata.csv",header=TRUE)
+Mar_2022<-read.csv("C:\\Users\\maizh\\Downloads/202203-divvy-tripdata.csv",header=TRUE)
+Apr_2022<-read.csv("C:\\Users\\maizh\\Downloads/202204-divvy-tripdata.csv",header=TRUE)
+May_2022<-read.csv("C:\\Users\\maizh\\Downloads/202205-divvy-tripdata.csv",header=TRUE)
+Jun_2022<-read.csv("C:\\Users\\maizh\\Downloads/202206-divvy-tripdata.csv",header=TRUE)
+Jul_2022<-read.csv("C:\\Users\\maizh\\Downloads/202207-divvy-tripdata.csv",header=TRUE)
+Aug_2022<-read.csv("C:\\Users\\maizh\\Downloads/202208-divvy-tripdata.csv",header=TRUE)
+Sept_2022<-read.csv("C:\\Users\\maizh\\Downloads/202209-divvy-tripdata.csv",header=TRUE)
+Oct_2022<-read.csv("C:\\Users\\maizh\\Downloads/202210-divvy-tripdata.csv",header=TRUE)
+Nov_2022<-read.csv("C:\\Users\\maizh\\Downloads/202211-divvy-tripdata.csv",header=TRUE)
+Dec_2022<-read.csv("C:\\Users\\maizh\\Downloads/202212-divvy-tripdata.csv",header=TRUE)
+```
+
+
+```{r}
+# Check the column naes of each data set
+colnames(Jan_2022)
+colnames(Feb_2022)
+colnames(Mar_2022)
+colnames(Apr_2022)
+colnames(May_2022)
+colnames(Jun_2022)
+colnames(Jul_2022)
+colnames(Aug_2022)
+colnames(Sept_2022)
+colnames(Oct_2022)
+colnames(Nov_2022)
+colnames(Dec_2022)
+```
+
+
+```{r}
+# Combine all 12 months data into a single data frame
+Trips_2022<- bind_rows(Jan_2022, Feb_2022, Mar_2022, Apr_2022, May_2022, Jun_2022, Jul_2022,
+                       Aug_2022, Sept_2022, Oct_2022, Nov_2022, Dec_2022)
+```
+
+## Process-Cleaning the data
+
+```{r}
+# Check the data format for each columns.
+str(Trips_2022)
+```
+
+```{r}
+# Converting "started_at" and "ended_at" columns to date-time forma(YYYY-MM-DD HH:MM:SS). 
+Trips_2022$started_at<- ymd_hms(Trips_2022$started_at)
+Trips_2022$ended_at<- ymd_hms(Trips_2022$ended_at)
+str(Trips_2022)
+```
+
+```{r}
+# Check for any null value
+na<- any(is.na(Trips_2022))
+print(na)
+
+# Remove all the null value
+Trips_2022<- Trips_2022 %>% 
+              drop_na()
+
+nna<- any(is.na(Trips_2022))
+print(nna)
+```
+
+```{r}
+# Check for any duplicated value
+duplicated_rows<- duplicated(Trips_2022[,c("ride_id", "started_at")])
+summary(duplicated_rows)
+```
+
+```{r}
+# Check if each value has 16 characters in ride_id
+ride_id_length<- nchar(Trips_2022$ride_id)
+summary(ride_id_length)
+```
+
+```{r}
+# Check the label name of "rideable_type" and "member_casual" columns.
+table(Trips_2022$rideable_type)
+table(Trips_2022$member_casual)
+```
+
+### Analysis and Share
+
+```{r}
+# Add columns that contains day, month, year, hours etc.
+Trips_2022$Date<- as.Date(Trips_2022$started_at)
+Trips_2022$Month<- format(as.Date(Trips_2022$Date), "%m")
+Trips_2022$Day<- format(as.Date(Trips_2022$Date), "%d")
+Trips_2022$Year<- format(as.Date(Trips_2022$Date), "%Y")
+Trips_2022$Day_of_Week<- format(as.Date(Trips_2022$Date), "%A")
+Trips_2022$Hours<- format(as.POSIXct(Trips_2022$started_at), "%H")
+```
+
+```{r}
+# Calculate the length of each ride
+Trips_2022$ride_length<- difftime(Trips_2022$ended_at, Trips_2022$started_at)
+str(Trips_2022)
+```
+
+```{r}
+# convert the ride_length to numeric format
+Trips_2022<- Trips_2022 %>% 
+  mutate(ride_length = as.numeric(as.character(ride_length)))
+str(Trips_2022)
+```
+
+```{r}
+# Change the value of ride_length and find out if there is any negative value 
+# or values that greater than a day
+Trips_2022_v2<- Trips_2022 %>% 
+  filter(!(ride_length < 0 | ride_length >= 86400))
+dim(Trips_2022_v2)
+```
+
+### Visulaztion
+```{r}
+# To prevent values in the graph from being displayed in scientific notation such as "2e+02," 
+options(scipen = 100)
+```
+
+### Aggregate Rides and Trip Duration by Members and Casual Users
+```{r}
+# Visualize the Total Rides Taken by Members and Casual Users
+Trips_2022_v2 %>% 
+  group_by(member_casual) %>% 
+  summarize(number_of_ride =n())
+
+Trips_2022_v2 %>% 
+  group_by(member_casual) %>% 
+  summarize(number_of_ride =n()) %>% 
+ggplot(mapping= aes(x= 'Content', y=number_of_ride, fill= member_casual))+  
+  geom_bar(stat= 'identity', 
+           position ='stack', width = 1)+            
+  coord_polar(theta = 'y')+          
+  labs(x='', y='', title = 'Aggregate Rides by Membership Type: Members vs Casual Users')+  
+  theme_void()+    
+  geom_text(aes(label = number_of_ride), position = position_stack(vjust = 0.5))
+
+# Visualize the Trip Duration by Members and Casual Users
+Trips_2022_v2 %>% 
+  group_by(member_casual) %>% 
+  summarize(Total_trip_duration= sum(ride_length))
+
+Trips_2022_v2 %>% 
+  group_by(member_casual) %>% 
+  summarize(Total_trip_duration= sum(ride_length))  %>% 
+  ggplot(mapping= aes(x= 'Content', y=Total_trip_duration, fill= member_casual))+
+  geom_bar(stat= 'identity', 
+           position ='stack', width = 1)+
+  coord_polar(theta = 'y')+          
+  labs(x='', y='', title = 'Overall Trip Duration: Members vs. Casual Users')+  
+  theme_void()+    
+  geom_text(aes(label = Total_trip_duration), position = position_stack(vjust = 0.5))
+```
+
+### Ride Count by Day of the Week by Members and Casual Users 
+
+```{r}
+# Comparing the Number of Rides for Casual users and Members by Day of the Week
+Trips_2022_v2$Day_of_Week <- ordered(Trips_2022_v2$Day_of_Week, 
+                                     levels= c("Sunday", "Monday", "Tuesday", "Wednesday",
+                                               "Thursday", "Friday", "Saturday"))
+
+Trips_2022_v2 %>% 
+  group_by(member_casual, Day_of_Week) %>% 
+  summarize(number_of_ride =n(), .groups = "keep") %>% 
+  arrange(Day_of_Week, member_casual)
+
+Trips_2022_v2 %>% 
+  group_by(member_casual, Day_of_Week) %>% 
+  summarize(number_of_ride =n(), .groups = "keep") %>% 
+ggplot(mapping = aes(x=Day_of_Week, y= number_of_ride, fill=member_casual))+
+  geom_bar(position = "dodge", stat="identity")+
+  labs(title = "Ride Count by Day of the Week: Members vs. Casual Users", 
+       x="Days of Week", y="Number of ride")
+```
+
+### Average Trip Duration by Day of the Week by Members and Casual Users 
+
+```{r}
+# Comparing the Average Ride Duration by Day of the Week by Members and Casual Users 
+Trips_2022_v2 %>% 
+  group_by(member_casual, Day_of_Week) %>% 
+  summarize(number_of_ride =n(),
+            average_duration=mean(ride_length), .groups = 'keep') %>% 
+  ggplot(mapping = aes(x=Day_of_Week, y=average_duration, fill=member_casual))+
+  geom_bar(position = "dodge", stat="identity")+
+  labs(title = 'Average Ride Duration: Members vs. Casual Users', y= 'Average_duration')
+```
+
+```{r}
+# Comparing Total Rides by Day of the Week by Members and Casual Users (Per Hour)
+Trips_2022_v2 %>% 
+  group_by(member_casual, Hours, Day_of_Week) %>% 
+  summarize(number_of_ride =n(),
+            .groups='keep') %>% 
+  ggplot(mapping = aes(x=Hours, y=number_of_ride, fill=member_casual))+
+  geom_bar(position = 'dodge', stat= 'identity')+
+  labs(title = 'Total Rides by Day of the Week: Members vs. Casual Users (Per Hour)', y='Number of Rides')+
+  facet_wrap(~Day_of_Week)
+```
+
+### Frequency of each rideable_type 
+```{r}
+# Compare the frequency of each rideable_type.
+Trips_2022_v2 %>% 
+  group_by(member_casual,rideable_type) %>% 
+  summarize(number_of_ride =n(), .groups = "keep") %>% 
+  ggplot(mapping = aes(x=rideable_type, y=number_of_ride, fill=member_casual))+
+  geom_bar(stat = 'identity', position = 'dodge')+
+  labs(title = 'Number of Rides by Rideable Type and Member vs. Causal User', x= 'Rideable Type',
+       y= 'Number of Rides')
+```
+
+### Monthly Ride Count by Members and Casual Users
+```{r}
+# Comparing the Number of Rides for Casual Users and Members by Each Month
+
+Trips_2022_v2 %>% 
+  group_by(member_casual, Month) %>% 
+  summarize(number_of_ride =n(), .groups = 'keep') %>% 
+  ggplot(mapping = aes(x=Month, y=number_of_ride, fill=member_casual))+
+  geom_bar(position = 'dodge', stat='identity')+
+  labs(title= "Monthly Ride Count by Members and Casual Users")
+```
