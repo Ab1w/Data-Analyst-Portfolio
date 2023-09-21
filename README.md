@@ -330,6 +330,6 @@ In order to develop a marketing strategy that effectively converts casual riders
 
 * 2. To attract more casual riders and encourage them to become members during the low passenger flow of winter, offering preferential monthly or quarterly membership prices can be an effective strategy.
 
-* 3. The advertising budget should be increased during peak season (July-September) to attract more recreational riders to become members. In the off-season (winter), the advertising budget should be reduced to control costs
+* 3. The advertising budget should be increased during peak season (July-September) to attract more casual riders to become members. In the off-season (winter), the advertising budget should be reduced to control costs
 
 
