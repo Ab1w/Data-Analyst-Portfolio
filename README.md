@@ -326,7 +326,7 @@ Based on our research, we have discovered several important findings. First, cas
 
 In order to develop a marketing strategy that effectively converts casual riders into annual memberships, there are some suggestion 
 
-* 1. Introduce a discounted weekday membership rate to specifically target and attract casual riders. This strategy could attract causal riders.
+* 1. Considering the extended durations of rides by casual riders, it would be beneficial to introduce membership discounts for long-distance cycling, such as providing the initial 5 kilometers of riding at no cost. This initiative aims to encourage more casual riders to transition into becoming members.
 
 * 2. To attract more casual riders and encourage them to become members during the low passenger flow of winter, offering preferential monthly or quarterly membership prices can be an effective strategy.
 
