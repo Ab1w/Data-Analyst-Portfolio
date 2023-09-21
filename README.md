@@ -320,13 +320,13 @@ we found that the ridership of both annual members and casual users experienced 
 
 * Conclusion
 
-Based on our research, we have discovered several important findings. Firstly, there is a larger number of members compared to causal riders, presenting a significant opportunity to convert causal riders into members, which can greatly benefit the company. Secondly, casual riders have a higher trip duration, particularly on weekends, whereas members mainly ride on weekdays. Thirdly, we observed that only casual riders displayed interest in using docked bikes, whereas members preferred using classic bikes and electric bikes, but have not interest in docked bikes. Lastly, we identified a seasonal pattern in ridership. The number of rides starts to recover in spring, continues to increase during summer, and experiences a sharp decline in winter. The main differences between members and casual riders is that members utilize their bikes during weekday, while recreational riders primarily use their bikes on weekends. Furthermore, they also exhibit difference preferences for the type of bike.
+Based on our research, we have discovered several important findings. First, casual riders have a higher trip duration than members, which presents a significant opportunity to convert casual riders into members, which can greatly benefit the company. Secondly, casual riders have a higher trip duration on weekends, whereas members mainly ride on weekdays. Thirdly, we observed that only casual riders displayed interest in using docked bikes, whereas members preferred using classic bikes and electric bikes, but have not interest in docked bikes. Lastly, we identified a seasonal pattern in ridership. The number of rides starts to recover in spring, continues to increase during summer, and experiences a sharp decline in winter. The main differences between members and casual riders is that members utilize their bikes during weekday, while recreational riders primarily use their bikes on weekends. Furthermore, they also exhibit difference preferences for the type of bike.
 
 * Recommendations
 
 In order to develop a marketing strategy that effectively converts casual riders into annual memberships, there are some suggestion 
 
-* 1. Introduce a discounted weekday membership rate to specifically target and attract recreational riders. Given that the usage rate of docked bikes is higher among casual riders compared to members, offer a preferential price for members when using docked bikes. This strategy will entice recreational riders and also increase the utilization of docked bikes among members.
+* 1. Introduce a discounted weekday membership rate to specifically target and attract casual riders. This strategy could attract causal riders.
 
 * 2. To attract more casual riders and encourage them to become members during the low passenger flow of winter, offering preferential monthly or quarterly membership prices can be an effective strategy.
 
