@@ -102,7 +102,7 @@ Now all the data have identical column names and formatting types. Secondly,  we
 na<- any(is.na(Trips_2022))
 print(na)
 
-* Remove all the null value
+# Remove all the null value
 Trips_2022<- Trips_2022 %>% 
               drop_na()
 
