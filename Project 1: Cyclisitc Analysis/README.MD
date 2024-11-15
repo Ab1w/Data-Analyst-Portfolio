@@ -132,7 +132,7 @@ table(Trips_2022$member_casual)
 
 Now we have successfully resolve the potential problems in the data, ensuring the integrity and accuracy of the data set. Next, we can proceed to the analysis phase.
 
-### Analysis and Share
+## 🔍 Analysis and Share
 
 To enhance our analysis and gain deeper insights, it is essential to add new columns of content to the data set. These additional columns can provide additional relevant metrics that will contribute to a more comprehensive understanding of the data.
 
@@ -171,7 +171,7 @@ Trips_2022_v2<- Trips_2022 %>%
 dim(Trips_2022_v2)
 ```
 
-### Visulaztion
+## 📊 Visulaztion
 
 ```
 # To prevent values in the graph from being displayed in scientific notation such as "2e+02," 
@@ -317,13 +317,13 @@ Trips_2022_v2 %>%
 we found that the ridership of both annual members and casual users experienced a recovery starting from April and continued to rise, reaching its peak in September. However, after September, there was a decline. The trends suggest a seasonal pattern in ridership, where the number of riders increases as temperatures rise (from April to September) for both members and casual users. Conversely, as temperatures drop and snowfall occurs, ridership experiences a decline.
 
 
-### Act
+## ⚡ Act
 
 * Conclusion
 
 Our research revealed that casual riders have longer trip durations than members, especially on weekends, while members primarily ride on weekdays. Casual riders also prefer docked bikes, unlike members who favor classic and electric bikes. Additionally, ridership follows a clear seasonal trend, recovering in spring, peaking in summer, and declining sharply in winter. These findings highlight key differences in usage patterns and preferences between casual riders and members, presenting opportunities to tailor strategies for converting casual riders into members.
 
-* Recommendations
+* 💡 Recommendations
 
 To effectively convert casual riders into annual members, we propose the following strategies:
 
