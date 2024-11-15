@@ -320,7 +320,7 @@ we found that the ridership of both annual members and casual users experienced 
 
 * Conclusion
 
-* Our research revealed that casual riders have longer trip durations than members, especially on weekends, while members primarily ride on weekdays. Casual riders also prefer docked bikes, unlike members who favor classic and electric bikes. Additionally, ridership follows a clear seasonal trend, recovering in spring, peaking in summer, and declining sharply in winter. These findings highlight key differences in usage patterns and preferences between casual riders and members, presenting opportunities to tailor strategies for converting casual riders into members.
+Our research revealed that casual riders have longer trip durations than members, especially on weekends, while members primarily ride on weekdays. Casual riders also prefer docked bikes, unlike members who favor classic and electric bikes. Additionally, ridership follows a clear seasonal trend, recovering in spring, peaking in summer, and declining sharply in winter. These findings highlight key differences in usage patterns and preferences between casual riders and members, presenting opportunities to tailor strategies for converting casual riders into members.
 
 * Recommendations
 
