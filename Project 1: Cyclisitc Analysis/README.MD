@@ -281,7 +281,7 @@ Trips_2022_v2 %>%
 
 The graph from above provides evidence that supports our hypothesis. It demonstrates a steady rise in usage during the weekday mornings, specifically between 6am and 8am, with the highest point reached at 8am. Moreover, the graph illustrates a consistent growth in usage from 3pm to 5pm, peaking at 5pm. Both trends align with the commuting time frame of office workers. These two trends consistently align with the specified commuting time period for office workers.
 
-## Frequency of each rideable_type 
+### Frequency of each rideable_type 
 
 ```
 # Compare the frequency of each rideable_type.
