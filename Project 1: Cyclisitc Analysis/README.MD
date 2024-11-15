@@ -217,10 +217,10 @@ Trips_2022_v2 %>%
 ![image](https://github.com/ZhihongMai/Data-Analyst-Portfolio/blob/main/Project%201%3A%20Cyclisitc%20Analysis/Aggregate%20Rides%20by%20Membership.png)
 ![image](https://github.com/Ab1w/Google-Case-Study-Cyclistic/blob/ab23c07e7572879f14494a557d5fdfc48c334bc9/Overall%20Trip%20Duration.png)
 
-# Surprisingly, Annual members demonstrate a higher trips compared to casual members, while casual members spend significantly more time on bicycles than annual members.
+Surprisingly, Annual members demonstrate a higher trips compared to casual members, while casual members spend significantly more time on bicycles than annual members.
 
 
-# Ride Count by Day of the Week by Members and Casual Users 
+* Ride Count by Day of the Week by Members and Casual Users 
 
 ```
 # Comparing the Number of Rides for Casual users and Members by Day of the Week
