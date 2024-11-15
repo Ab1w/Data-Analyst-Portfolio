@@ -246,7 +246,7 @@ ggplot(mapping = aes(x=Day_of_Week, y= number_of_ride, fill=member_casual))+
 We found that weekly ridership for annual memberships remains relatively consistent throughout the weekdays but experiences a significant decrease over the weekend, especially on Sundays.
 Weekly ridership among casual users is relatively low during weekdays but experiences a substantial increase during weekends, reaching its peak on Saturdays.
 
-### Average Trip Duration by Day of the Week by Members and Casual Users 
+* Average Trip Duration by Day of the Week by Members and Casual Users 
 
 ```
 # Comparing the Average Ride Duration by Day of the Week by Members and Casual Users 
@@ -284,7 +284,7 @@ The graph from above provides evidence that supports our hypothesis. It demonstr
 * Frequency of each rideable_type 
 
 ```
-* Compare the frequency of each rideable_type.
+# Compare the frequency of each rideable_type.
 Trips_2022_v2 %>% 
   group_by(member_casual,rideable_type) %>% 
   summarize(number_of_ride =n(), .groups = "keep") %>% 
@@ -298,7 +298,7 @@ Trips_2022_v2 %>%
 
 We found that annual members prefer classic and electric bikes but have no interest in docked bikes. On the other hand, casual users mostly prefer electric bikes, followed by classic bikes, but only small portion of them show a preference for docked bikes.
 
-### Monthly Ride Count by Members and Casual Users
+* Monthly Ride Count by Members and Casual Users
 
 ```
 # Comparing the Number of Rides for Casual Users and Members by Each Month
