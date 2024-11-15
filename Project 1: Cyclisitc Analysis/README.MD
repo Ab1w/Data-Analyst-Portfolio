@@ -320,17 +320,7 @@ we found that the ridership of both annual members and casual users experienced 
 
 * Conclusion
 
-Our research uncovered several key insights:
-
-Trip duration: Recreational riders tend to have longer trips than members, which provides a good opportunity to convert recreational riders into members to increase company revenue.
-
-Riding patterns: Recreational riders ride primarily on weekends, while members ride primarily on weekdays.
-
-Bike preferences: Recreational riders are interested in using docked bikes, while members prefer classic and e-bikes and are not interested in docked bikes.
-
-Seasonal trends: Ridership follows a seasonal pattern, with recovery starting in the spring, peaking in the summer, and falling sharply in the winter.
-
-In summary, the main differences between recreational riders and members are their riding schedules—recreational riders on weekends, members on weekdays—and their preference for bike type.
+* Our research revealed that casual riders have longer trip durations than members, especially on weekends, while members primarily ride on weekdays. Casual riders also prefer docked bikes, unlike members who favor classic and electric bikes. Additionally, ridership follows a clear seasonal trend, recovering in spring, peaking in summer, and declining sharply in winter. These findings highlight key differences in usage patterns and preferences between casual riders and members, presenting opportunities to tailor strategies for converting casual riders into members.
 
 * Recommendations
 
