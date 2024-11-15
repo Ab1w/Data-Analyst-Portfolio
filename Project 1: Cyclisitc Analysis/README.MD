@@ -54,7 +54,7 @@ Dec_2022<-read.csv("C:\\Users\\maizh\\Downloads/202212-divvy-tripdata.csv",heade
 We need to examine the column names of each file and make the necessary arrangements before merging the data into one file.
 
 ```
-* Check the column naes of each data set
+# Check the column naes of each data set
 colnames(Jan_2022)
 colnames(Feb_2022)
 colnames(Mar_2022)
@@ -72,7 +72,7 @@ colnames(Dec_2022)
 With consistent column names across all data sets, we will be able to merge the data from the 12 months into a single data frame.
 
 ```
-* Combine all 12 months data into a single data frame
+# Combine all 12 months data into a single data frame
 Trips_2022<- bind_rows(Jan_2022, Feb_2022, Mar_2022, Apr_2022, May_2022, Jun_2022, Jul_2022,
                        Aug_2022, Sept_2022, Oct_2022, Nov_2022, Dec_2022)
 ```
@@ -82,14 +82,14 @@ Trips_2022<- bind_rows(Jan_2022, Feb_2022, Mar_2022, Apr_2022, May_2022, Jun_202
 Firstly, we need to Examine the Trips_2022 data frame to verify the accuracy of the data format and identity any inconsistencies.
 
 ```
-* Check the data format for each columns.
+# Check the data format for each columns.
 str(Trips_2022)
 ```
 
 The result shows that the "started_at" and "ended_at" columns are not having identical formatting types, as they are currently formatted as characters/chr while containing date-time data. It is necessary to convert these columns to the appropriate date-time format. Once the data is correctly formatted, it will enable precise analysis of the data set.
 
 ```
-* Converting "started_at" and "ended_at" columns to date-time forma(YYYY-MM-DD HH:MM:SS). 
+# Converting "started_at" and "ended_at" columns to date-time forma(YYYY-MM-DD HH:MM:SS). 
 Trips_2022$started_at<- ymd_hms(Trips_2022$started_at)
 Trips_2022$ended_at<- ymd_hms(Trips_2022$ended_at)
 str(Trips_2022)
@@ -98,7 +98,7 @@ str(Trips_2022)
 Now all the data have identical column names and formatting types. Secondly,  we need to check for any null and duplicate values within the data set and adjust them to ensure data integrity and completeness.
 
 ```
-* Check for any null value
+# Check for any null value
 na<- any(is.na(Trips_2022))
 print(na)
 
@@ -111,7 +111,7 @@ print(nna)
 ```
 
 ```
-* Check for any duplicated value
+# Check for any duplicated value
 duplicated_rows<- duplicated(Trips_2022[,c("ride_id", "started_at")])
 summary(duplicated_rows)
 ```
@@ -119,13 +119,13 @@ summary(duplicated_rows)
 Thirdly, we will verify if each value in the "ride_id" column contains exactly 16 characters. Furthermore, we will check the label names within the "rideable_type" and "member_casual" columns.
 
 ```
-* Check if each value has 16 characters in ride_id
+# Check if each value has 16 characters in ride_id
 ride_id_length<- nchar(Trips_2022$ride_id)
 summary(ride_id_length)
 ```
 
 ```
-* Check the label name of "rideable_type" and "member_casual" columns.
+# Check the label name of "rideable_type" and "member_casual" columns.
 table(Trips_2022$rideable_type)
 table(Trips_2022$member_casual)
 ```
@@ -181,7 +181,7 @@ options(scipen = 100)
 * Aggregate Rides and Trip Duration by Members and Casual Users
 
 ```
-* Visualize the Total Rides Taken by Members and Casual Users
+# Visualize the Total Rides Taken by Members and Casual Users
 Trips_2022_v2 %>% 
   group_by(member_casual) %>% 
   summarize(number_of_ride =n())
@@ -197,7 +197,7 @@ ggplot(mapping= aes(x= 'Content', y=number_of_ride, fill= member_casual))+
   theme_void()+    
   geom_text(aes(label = number_of_ride), position = position_stack(vjust = 0.5))
 
-* Visualize the Trip Duration by Members and Casual Users
+# Visualize the Trip Duration by Members and Casual Users
 Trips_2022_v2 %>% 
   group_by(member_casual) %>% 
   summarize(Total_trip_duration= sum(ride_length))
@@ -217,10 +217,10 @@ Trips_2022_v2 %>%
 ![image](https://github.com/ZhihongMai/Data-Analyst-Portfolio/blob/main/Project%201%3A%20Cyclisitc%20Analysis/Aggregate%20Rides%20by%20Membership.png)
 ![image](https://github.com/Ab1w/Google-Case-Study-Cyclistic/blob/ab23c07e7572879f14494a557d5fdfc48c334bc9/Overall%20Trip%20Duration.png)
 
-* Surprisingly, Annual members demonstrate a higher trips compared to casual members, while casual members spend significantly more time on bicycles than annual members.
+# Surprisingly, Annual members demonstrate a higher trips compared to casual members, while casual members spend significantly more time on bicycles than annual members.
 
 
-* Ride Count by Day of the Week by Members and Casual Users 
+# Ride Count by Day of the Week by Members and Casual Users 
 
 ```
 # Comparing the Number of Rides for Casual users and Members by Day of the Week
@@ -264,7 +264,7 @@ Trips_2022_v2 %>%
 
 The result indicates that the average trip duration for casual members is nearly twice as long as that of annual members over the span of one week. Based on this finding, it is reasonable to assume that annual members predominantly utilize bicycles for commuting purposes, while temporary members primarily opt for bicycles for sports or other leisure activities.
 
-### Total Rides by Day of the Week by Members and Casual Users (Per Hour)
+* Total Rides by Day of the Week by Members and Casual Users (Per Hour)
 
 ```
 # Comparing Total Rides by Day of the Week by Members and Casual Users (Per Hour)
