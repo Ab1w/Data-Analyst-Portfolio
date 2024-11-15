@@ -324,11 +324,11 @@ Our research revealed that casual riders have longer trip durations than members
 
 * Recommendations
 
-In order to develop a marketing strategy that effectively converts casual riders into annual memberships, there are some suggestion 
+To effectively convert casual riders into annual members, we propose the following strategies:
 
-* 1. Considering the long durations of rides by casual riders, it would be beneficial to introduce membership discounts for long-distance cycling, such as providing the initial 5 kilometers of riding at no cost. This initiative aims to encourage more casual riders becoming members.
+* 1. Leverage Long Ride Durations: Casual riders often take longer trips, making it worthwhile to offer membership incentives for long-distance cycling. For instance, providing the first 5 kilometers for free could encourage casual riders to see the value of membership and consider upgrading.
 
-* 2. To attract more casual riders and encourage them to become members during the low passenger flow of winter, offering preferential monthly or quarterly membership prices can be an effective strategy.
+* 2. Seasonal Membership Discounts: To boost membership sign-ups during the low-ridership winter months, offering discounted monthly or quarterly memberships can be a compelling incentive for casual riders to commit.
 
-* 3. The advertising budget should be increased during peak season (July-September) to attract more casual riders to become members. In the off-season (winter), the advertising budget should be reduced to control costs
+* 3. Seasonal Advertising Strategy: Allocate a higher advertising budget during peak ridership months (July-September) to maximize visibility and target casual riders when demand is highest. Conversely, reduce advertising spend during the off-season to optimize costs while maintaining engagement.
 
