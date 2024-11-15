@@ -26,7 +26,7 @@ The datasets have a different name because Cyclistic is a fictional company. For
 
 Since the data contain 5,661,859 rows, using RStudio is the preferred choice over a spreadsheet. This decision is based on the fact that spreadsheets are not ideal for managing such large datasets effectively.
 
-### Install and loading packages
+* Install and loading packages
 ```
 # Since we have installed these packages, we can simply load them.
 library(tidyverse)
