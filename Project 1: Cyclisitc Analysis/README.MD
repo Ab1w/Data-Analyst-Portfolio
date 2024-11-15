@@ -220,7 +220,7 @@ Trips_2022_v2 %>%
 * Surprisingly, Annual members demonstrate a higher trips compared to casual members, while casual members spend significantly more time on bicycles than annual members.
 
 
-## Ride Count by Day of the Week by Members and Casual Users 
+### Ride Count by Day of the Week by Members and Casual Users 
 
 ```
 # Comparing the Number of Rides for Casual users and Members by Day of the Week
