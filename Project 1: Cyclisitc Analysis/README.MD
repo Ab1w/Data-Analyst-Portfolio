@@ -34,7 +34,7 @@ library(ggplot2)
 library(lubridate)
 ```
 
-### Importing the data
+* Importing the data
 ```
 # Import data from local storage. 
 Jan_2022<-read.csv("C:\\Users\\maizh\\Downloads/202201-divvy-tripdata.csv",header=TRUE)
@@ -54,7 +54,7 @@ Dec_2022<-read.csv("C:\\Users\\maizh\\Downloads/202212-divvy-tripdata.csv",heade
 We need to examine the column names of each file and make the necessary arrangements before merging the data into one file.
 
 ```
-# Check the column naes of each data set
+* Check the column naes of each data set
 colnames(Jan_2022)
 colnames(Feb_2022)
 colnames(Mar_2022)
@@ -72,12 +72,12 @@ colnames(Dec_2022)
 With consistent column names across all data sets, we will be able to merge the data from the 12 months into a single data frame.
 
 ```
-# Combine all 12 months data into a single data frame
+* Combine all 12 months data into a single data frame
 Trips_2022<- bind_rows(Jan_2022, Feb_2022, Mar_2022, Apr_2022, May_2022, Jun_2022, Jul_2022,
                        Aug_2022, Sept_2022, Oct_2022, Nov_2022, Dec_2022)
 ```
 
-### Process-Cleaning the data
+## Process-Cleaning the data
 
 Firstly, we need to Examine the Trips_2022 data frame to verify the accuracy of the data format and identity any inconsistencies.
 
