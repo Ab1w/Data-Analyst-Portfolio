@@ -20,14 +20,14 @@ Moreno has set a clear goal: Design marketing strategies aimed at converting cas
 
 Our goal is to Design marketing strategies aimed at converting casual riders into annual members. The key stakeholders are Cyclist executive team and The director of marketing.
 
-## 🛠 *Prepare*
+## 🛠 * Prepare *
 We will use Cyclistic’s historical trip data from 2022 January to 2022 December to analyze and identify trends. The data can be found from this link: https://divvy-tripdata.s3.amazonaws.com/index.html
 
 The datasets have a different name because Cyclistic is a fictional company. For the purposes of this case study, the datasets are appropriate and will enable you to answer the business questions. The data has been made available by Motivate International Inc. under this license: https://ride.divvybikes.com/data-license-agreement
 
 Since the data contain 5,661,859 rows, using RStudio is the preferred choice over a spreadsheet. This decision is based on the fact that spreadsheets are not ideal for managing such large datasets effectively.
 
-* Install and loading packages
+### Install and loading packages
 ```
 # Since we have installed these packages, we can simply load them.
 library(tidyverse)
