@@ -7,6 +7,3 @@ The project also explores regional differences, specifically in the U.S. market,
 
 ## 📝 *Summary* 
 Our analysis reveals a clear seasonal pattern in avocado pricing, with prices rising in the summer and falling in the winter. While national trends suggest a general price decline, the West Region is expected to see a price increase despite similar seasonal fluctuations. The dataset is balanced across regions, though incomplete for certain years, and the predictions align with the observed seasonal trends.
-
-## 💡 *Suggestion*
-
