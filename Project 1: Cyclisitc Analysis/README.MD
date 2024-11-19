@@ -27,7 +27,7 @@ The datasets have a different name because Cyclistic is a fictional company. For
 
 Since the data contain 5,661,859 rows, using RStudio is the preferred choice over a spreadsheet. This decision is based on the fact that spreadsheets are not ideal for managing such large datasets effectively.
 
-### Install and loading packages
+### *Install and loading packages*
 ```
 # Since we have installed these packages, we can simply load them.
 library(tidyverse)
@@ -35,7 +35,7 @@ library(ggplot2)
 library(lubridate)
 ```
 
-* Importing the data
+### *Importing the data*
 ```
 # Import data from local storage. 
 Jan_2022<-read.csv("C:\\Users\\maizh\\Downloads/202201-divvy-tripdata.csv",header=TRUE)
@@ -78,7 +78,7 @@ Trips_2022<- bind_rows(Jan_2022, Feb_2022, Mar_2022, Apr_2022, May_2022, Jun_202
                        Aug_2022, Sept_2022, Oct_2022, Nov_2022, Dec_2022)
 ```
 
-## 🧹 Process-Cleaning the data
+## 🧹 *Process-Cleaning the data*
 
 Firstly, we need to Examine the Trips_2022 data frame to verify the accuracy of the data format and identity any inconsistencies.
 
@@ -133,7 +133,7 @@ table(Trips_2022$member_casual)
 
 Now we have successfully resolve the potential problems in the data, ensuring the integrity and accuracy of the data set. Next, we can proceed to the analysis phase.
 
-## 🔍 Analysis and Share
+## 🔍 *Analysis and Share*
 
 To enhance our analysis and gain deeper insights, it is essential to add new columns of content to the data set. These additional columns can provide additional relevant metrics that will contribute to a more comprehensive understanding of the data.
 
@@ -172,14 +172,14 @@ Trips_2022_v2<- Trips_2022 %>%
 dim(Trips_2022_v2)
 ```
 
-## 📊 Visulaztion
+## 📊 *Visulaztion*
 
 ```
 # To prevent values in the graph from being displayed in scientific notation such as "2e+02," 
 options(scipen = 100)
 ```
 
-* Aggregate Rides and Trip Duration by Members and Casual Users
+### *Aggregate Rides and Trip Duration by Members and Casual Users*
 
 ```
 # Visualize the Total Rides Taken by Members and Casual Users
@@ -221,7 +221,7 @@ Trips_2022_v2 %>%
 Surprisingly, Annual members demonstrate a higher trips compared to casual members, while casual members spend significantly more time on bicycles than annual members.
 
 
-* Ride Count by Day of the Week by Members and Casual Users 
+### *Ride Count by Day of the Week by Members and Casual Users* 
 
 ```
 # Comparing the Number of Rides for Casual users and Members by Day of the Week
@@ -247,7 +247,7 @@ ggplot(mapping = aes(x=Day_of_Week, y= number_of_ride, fill=member_casual))+
 We found that weekly ridership for annual memberships remains relatively consistent throughout the weekdays but experiences a significant decrease over the weekend, especially on Sundays.
 Weekly ridership among casual users is relatively low during weekdays but experiences a substantial increase during weekends, reaching its peak on Saturdays.
 
-* Average Trip Duration by Day of the Week by Members and Casual Users 
+### *Average Trip Duration by Day of the Week by Members and Casual Users*
 
 ```
 # Comparing the Average Ride Duration by Day of the Week by Members and Casual Users 
@@ -265,7 +265,7 @@ Trips_2022_v2 %>%
 
 The result indicates that the average trip duration for casual members is nearly twice as long as that of annual members over the span of one week. Based on this finding, it is reasonable to assume that annual members predominantly utilize bicycles for commuting purposes, while temporary members primarily opt for bicycles for sports or other leisure activities.
 
-* Total Rides by Day of the Week by Members and Casual Users (Per Hour)
+### *Total Rides by Day of the Week by Members and Casual Users (Per Hour)*
 
 ```
 # Comparing Total Rides by Day of the Week by Members and Casual Users (Per Hour)
@@ -282,7 +282,7 @@ Trips_2022_v2 %>%
 
 The graph from above provides evidence that supports our hypothesis. It demonstrates a steady rise in usage during the weekday mornings, specifically between 6am and 8am, with the highest point reached at 8am. Moreover, the graph illustrates a consistent growth in usage from 3pm to 5pm, peaking at 5pm. Both trends align with the commuting time frame of office workers. These two trends consistently align with the specified commuting time period for office workers.
 
-* Frequency of each rideable_type 
+### *Frequency of each rideable_type*
 
 ```
 # Compare the frequency of each rideable_type.
@@ -299,7 +299,7 @@ Trips_2022_v2 %>%
 
 We found that annual members prefer classic and electric bikes but have no interest in docked bikes. On the other hand, casual users mostly prefer electric bikes, followed by classic bikes, but only small portion of them show a preference for docked bikes.
 
-* Monthly Ride Count by Members and Casual Users
+### *Monthly Ride Count by Members and Casual Users*
 
 ```
 # Comparing the Number of Rides for Casual Users and Members by Each Month
@@ -318,13 +318,13 @@ Trips_2022_v2 %>%
 we found that the ridership of both annual members and casual users experienced a recovery starting from April and continued to rise, reaching its peak in September. However, after September, there was a decline. The trends suggest a seasonal pattern in ridership, where the number of riders increases as temperatures rise (from April to September) for both members and casual users. Conversely, as temperatures drop and snowfall occurs, ridership experiences a decline.
 
 
-## ⚡ Act
+## ⚡ *Act*
 
 * Conclusion
 
 Our research revealed that casual riders have longer trip durations than members, especially on weekends, while members primarily ride on weekdays. Casual riders also prefer docked bikes, unlike members who favor classic and electric bikes. Additionally, ridership follows a clear seasonal trend, recovering in spring, peaking in summer, and declining sharply in winter. These findings highlight key differences in usage patterns and preferences between casual riders and members, presenting opportunities to tailor strategies for converting casual riders into members.
 
-* 💡 Recommendations
+## 💡 *Recommendations*
 
 To effectively convert casual riders into annual members, we propose the following strategies:
 
