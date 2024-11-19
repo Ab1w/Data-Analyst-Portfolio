@@ -1,4 +1,4 @@
-# **Project2: Customer Payment Analytics**
+# 📂 **Project2: Customer Payment Analytics**
 
 
 ## 📚 *Introduction*
