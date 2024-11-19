@@ -4,7 +4,7 @@
 
 This case study is based on Case 1 of the Google Data Analytics Professional Certificate: "How does a bike-share navigate speedy success?" Our role in this analysis is as junior data analysts on Cyclistic's marketing team, a bike sharing company located in Chicago. The Director of Marketing emphasizes that the company's future success relies on maximizing the count of annual members. Therefore, our objective is to investigate marketing strategies for converting recreational riders into annual members. To achieve this, it is crucial for us to gain an understanding of the distinct ways in which recreational riders and annual members utilize bikes.
 
-## 🏢 About the company 
+## 🏢 *About the company*
 
 Until now, Cyclistic’s marketing strategy relied on building general awareness and appealing to broad consumer segments. One approach that helped make these things possible was the flexibility of its pricing plans: single-ride passes, full-day passes, and annual memberships. Customers who purchase single-ride or full-day passes are referred to as casual riders. Customers who purchase annual memberships are Cyclistic members
 
@@ -12,7 +12,7 @@ Cyclistic’s finance analysts have concluded that annual members are much more 
 
 Moreno has set a clear goal: Design marketing strategies aimed at converting casual riders into annual members. In order to do that, however, the marketing analyst team needs to better understand how annual members and casual riders differ, why casual riders would buy a membership, and how digital media could affect their marketing tactics. Moreno and her team are interested in analyzing the Cyclistic historical bike trip data to identify trends.
 
-## ❓ Ask
+## ❓ *Ask*
 * How do annual members and casual riders use Cyclistic bikes differently?
 * Why would casual riders buy Cyclistic annual memberships?
 * How can Cyclistic use digital media to influence casual riders to become members?
@@ -20,7 +20,7 @@ Moreno has set a clear goal: Design marketing strategies aimed at converting cas
 
 Our goal is to Design marketing strategies aimed at converting casual riders into annual members. The key stakeholders are Cyclist executive team and The director of marketing.
 
-## 🛠 Prepare
+## 🛠 *Prepare*
 We will use Cyclistic’s historical trip data from 2022 January to 2022 December to analyze and identify trends. The data can be found from this link: https://divvy-tripdata.s3.amazonaws.com/index.html
 
 The datasets have a different name because Cyclistic is a fictional company. For the purposes of this case study, the datasets are appropriate and will enable you to answer the business questions. The data has been made available by Motivate International Inc. under this license: https://ride.divvybikes.com/data-license-agreement
