@@ -5,8 +5,6 @@ This project focuses on analyzing avocado pricing trends using time series analy
 
 The project also explores regional differences, specifically in the U.S. market, where avocado pricing trends vary by region. While the national trend indicates a decline in prices, the West Region is expected to experience an upward price trajectory, illustrating the importance of considering regional dynamics in forecasting.
 
-Aligned with our background in time series forecasting and data-driven strategy design, this project provides valuable insights for stakeholders in the avocado market, supporting more informed pricing, sales, and inventory strategies.
-
 ## 📝 *Summary* 
 In conclusion, our analysis reveals that the majority of borrowers have successfully repaid their loans, with only 17% defaulting. Firstly, the FICO score distribution is right-skewed, with most borrowers scoring between 675 and 725, and only a small proportion exceeding 775. Loans for debt consolidation have relatively low default rates, while loans for small business and education carry higher default risks. Additionally, there is an inverse relationship between FICO scores and default rates, and factors such as debt-to-income ratio (DTI), installment amounts, and revolving utilization are more strongly associated with default risk than income. Furthermore, defaults are dispersed across all income levels, with a higher concentration observed in the DTI range of 5-20. Geographically, China and France stand out with low default rates, while countries like Portugal, the U.S., and Indonesia exhibit higher default rates, indicating the need for more stringent approval processes in these regions.
 
