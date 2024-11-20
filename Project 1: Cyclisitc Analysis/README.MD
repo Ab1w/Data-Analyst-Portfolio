@@ -1,4 +1,4 @@
-# 📝 Project 1: Google-Case-Study-Cyclistic Analysis
+# 📂 Project 1: Google-Case-Study-Cyclistic Analysis
 
 ## 📚 *Introduction*
 
