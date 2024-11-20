@@ -1,4 +1,4 @@
-# 📂 **Project2: Loan Analytics**
+# 📂 **Project3: Loan Analytics**
 
 ## 📚 *Introduction*
 This project focuses on analyzing borrower risk and default behavior using key financial factors, including FICO credit scores, debt-to-income ratios (DTI), loan purposes, and geographical differences. The goal is to segment borrowers by risk levels, identify factors influencing default rates, and explore how these variables vary across different countries. By understanding these patterns, the project aims to optimize lending strategies, improve risk assessment processes, and identify opportunities for loan expansion in stable markets, ultimately driving lending business growth.
