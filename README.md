@@ -4,7 +4,7 @@
   </a>
 </h1>
 
-# 📂 **Project: Google Case Study Cyclistic Analysis**
+# 📂 **Google Case Study Cyclistic Analysis**
 
 ## 📚 *Introduction:* 
 This case study is based on Case 1 of the Google Data Analytics Professional Certificate: "How does a bike-share navigate speedy success?" Our role in this analysis is as junior data analysts on Cyclistic's marketing team, a bike sharing company located in Chicago. The Director of Marketing emphasizes that the company's future success relies on maximizing the count of annual members. Therefore, our objective is to investigate marketing strategies for converting recreational riders into annual members. To achieve this, it is crucial for us to gain an understanding of the distinct ways in which recreational riders and annual members utilize bikes.
